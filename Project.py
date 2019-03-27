@@ -15,7 +15,7 @@ class contents:
         
         #list of weights for the pickup model
         #initalizing as "-" to represent has not visited
-        self.pickupweighrs = [0,0,0,0] #order is north, south, east, west
+        self.pickupweights = [0,0,0,0] #order is north, south, east, west
         
         #identifyers if the block is special
         self.dropoff = False
@@ -69,32 +69,18 @@ class contents:
         
     #used to increment and decrement weights a certain ammount
     
-    #incrementing functions
-    def dincN(self,value): #give a new value to increment north to
-        self.dropoffweights[0] += value
+    #get functions for dropoff weights
+    def dgetN(self,value): #returns value of North weight in dropoff qtable
+        return self.dropoffweights[0]
     
-    def dincS(self, value): #give a new value to increment south to
-        self.dropoffweights[1] += value
+    def dgetS(self, value):#returns value of South weight in dropoff qtable
+        return self.dropoffweights[1]
         
-    def dincE(self,value): #give a new value to increment east to
-        self.dropoffweights[2] += value
+    def dgetE(self,value):#returns value of East weight in dropoff qtable
+        return self.dropoffweights[2]
     
-    def dincW(self, value): #give a new value to increment west to
-        self.dropoffweights[3] += value
-        
-    #decrementing functions
-    def ddecN(self,value): #give a new value to increment north to
-        self.dropoffweights[0] -= value
-    
-    def ddecS(self, value): #give a new value to increment south to
-        self.dropoffweights[1] -= value
-        
-    def ddecE(self,value): #give a new value to increment east to
-        self.dropoffweights[2] -= value
-    
-    def ddecW(self, value): #give a new value to increment west to
-        self.dropoffweights[3] -= value
-    
+    def dgetW(self, value):#returns value of West weight in dropoff qtable
+        return self.dropoffweights[3]
     
     
     #pickup weight functions
@@ -112,31 +98,20 @@ class contents:
         
     #used to increment and decrement weights a certain ammount
     
-    #incrementing functions
-    def pincN(self,value): #give a new value to increment north to
-        self.pickupweights[0] += value
+    #get functions for pickup weights
+    def pgetN(self,value): #returns value of North weight in pickup qtable
+        return self.pickupweights[0]
     
-    def pincS(self, value): #give a new value to increment south to
-        self.pickupweights[1] += value
+    def pgetS(self, value):  #returns value of South weight in pickup qtable
+        return self.pickupweights[1]
         
-    def pincE(self,value): #give a new value to increment east to
-        self.pickupweights[2] += value
+    def pgetE(self,value): #returns value of East weight in pickup qtable
+        return self.pickupweights[2]
     
-    def pincW(self, value): #give a new value to increment west to
-        self.pickupweights[3] += value
+    def pgetW(self, value): #returns value of West weight in pickup qtable
+        return self.pickupweights[3]
         
-    #decrementing functions
-    def pdecN(self,value): #give a new value to increment north to
-        self.pickupweights[0] -= value
-    
-    def pdecS(self, value): #give a new value to increment south to
-        self.pickupweights[1] -= value
-        
-    def pdecE(self,value): #give a new value to increment east to
-        self.pickupweights[2] -= value
-    
-    def pdecW(self, value): #give a new value to increment west to
-        self.pickupweights[3] -= value
+ 
     
         
 
