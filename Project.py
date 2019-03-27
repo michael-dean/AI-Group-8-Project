@@ -156,7 +156,7 @@ def isvalidcord(mat,x,y):#pass in the matrix to ensure correctness
 class avatar:
     def __init__(self):
         #cordinates
-        self.x=0
+        self.x=4
         self.y=0
         #carrying block
         self.carrying = False
@@ -255,8 +255,13 @@ testmatrix.initialize(contents(),5,5)
 print("Inital Matrix:")
 print(testmatrix)
 
-(testmatrix.getdataat(3,2)).tdropoff()
-(testmatrix.getdataat(1,1)).tpickup()
+(testmatrix.getdataat(0,4)).tdropoff()
+(testmatrix.getdataat(2,4)).tdropoff()
+(testmatrix.getdataat(4,1)).tdropoff()
+
+(testmatrix.getdataat(0,0)).tpickup()
+(testmatrix.getdataat(2,2)).tpickup()
+(testmatrix.getdataat(4,4)).tpickup()
 
 print("Matrix with one pickup(1) and dropoff(2)")
 print(testmatrix)
@@ -266,7 +271,6 @@ ava = avatar()
 print(ava)
 
 #test for avatar movement
-ava.moveN()
 print(ava)
 
 
