@@ -62,7 +62,7 @@ class Qtable:
     def maxdirection(self, i, j):
         max = self.get(i,j,0)
         direction = 0
-        for k in range(1,5):
+        for k in range(1,4):
             value = self.get(i,j,k)
 
             if (value > max):
